@@ -1,1 +1,9 @@
 /* add home page styles here */
+
+
+.Choose {
+    display:flex;
+    flex: row;
+}
+
+
