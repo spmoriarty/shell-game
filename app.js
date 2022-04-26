@@ -5,7 +5,9 @@
 
 // let state
 
-const button = document.getElementById('Choose1');
+const button = document.getElementById('Choose1', );
+const button2 = document.getElementById('Choose2', );
+const button3 = document.getElementById('Choose3', );
 
 const Wisely = document.getElementById('Wisely');
 const Poorly  = document.getElementById('Poorly');
@@ -18,6 +20,17 @@ button.addEventListener('click', () => {
     count++;
     Total.textContent = count;
 });
+button2.addEventListener('click', () => {
+  console.log('You have chosen');
+  count++;
+  Total.textContent = count;
+  });
+  
+  button3.addEventListener('click', () => {
+    console.log('You have chosen');
+    count++;
+    Total.textContent = count;
+    });
 
 
 
