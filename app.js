@@ -11,17 +11,18 @@ const button3 = document.getElementById('Choose3');
 
 
 // Results
-const Wisely = document.getElementById('Wisely');
-const Poorly  = document.getElementById('Poorly');
-const Total = document.getElementById('Total');
+let Wisely = document.getElementById('Wisely');
+let Poorly = document.getElementById('Poorly');
+let Total = document.getElementById('Total');
 
 let count = 0;
+
 //Remove -reset
-button.addEventListener('click', () => {
+const removal = () => {
   button.classlist.remove('grenade');
   button2.classlist.remove('grenade');
   button3.classlist.remove('grenade');
-});
+};
 
 
 button.addEventListener('click', () => {
@@ -44,17 +45,15 @@ button3.addEventListener('click', () => {
     Total.textContent = count;
 });
 
-
-let randomized = Math.ceil(Math.random() * 3); {
+const gameLogic = () => {
+const randomized = Math.ceil(Math.random() * 3) 
 if (randomized === 1){
-Choose1.classList.add('grenade');
+Choose1.classList.add('grenade'); {
 Wisely++;
 }
 else if (randomized === 2) {
 Choose2.classList.add('grenade');
 Poorly++;
-}
-else if (randomized === 3); {
-Choose3.classList.add('grenade')
-Poorly++;
-}};
+// need only 2 but one for each button
+else ()
+}}};
