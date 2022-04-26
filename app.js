@@ -7,13 +7,16 @@
 
 const button = document.getElementById('Choose1');
 
+const Wisely = document.getElementById('Wisely');
+const Poorly  = document.getElementById('Poorly');
+const Total = document.getElementById('Total')
 
 let count = 0;
 
-button.addEventListner('click'() function(button, ) {
-console.log('You have chosen');
-count++;
-span.textContent = count;
+button.addEventListener('click', () => {
+    console.log('You have chosen');
+    count++;
+    Total.textContent = count;
 });
 
 
