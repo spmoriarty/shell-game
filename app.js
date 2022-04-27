@@ -27,33 +27,32 @@ const removal = () => {
 
 button.addEventListener('click', () => {
     console.log('You have chosen');
-    randomized ();
+    gameLogic ();
     count++;
     Total.textContent = count;
 });
 button2.addEventListener('click', () => {
     console.log('You have chosen');
-    randomized ();
+    gameLogic ();
     count++;
     Total.textContent = count;
 });
   
 button3.addEventListener('click', () => {
     console.log('You have chosen');
-    randomized ();
+    gameLogic ();
     count++;
     Total.textContent = count;
 });
 
 const gameLogic = () => {
-const randomized = Math.ceil(Math.random() * 3) 
+const randomized = Math.ceil(Math.random() * 3)
 if (randomized === 1){
 Choose1.classList.add('grenade'); {
 Wisely++;
-}
+}}
 else if (randomized === 2) {
 Choose2.classList.add('grenade');
 Poorly++;
 // need only 2 but one for each button
-else ()
-}}};
+}};
