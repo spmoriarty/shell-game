@@ -18,11 +18,11 @@ let Total = document.getElementById('Total');
 let count = 0;
 
 //Remove -reset
-const removal = () => {
-  button.classlist.remove('grenade');
-  button2.classlist.remove('grenade');
-  button3.classlist.remove('grenade');
-};
+function removal() {
+    button.classlist.remove('grenade');
+    button2.classlist.remove('grenade');
+    button3.classlist.remove('grenade');
+}
 
 
 button.addEventListener('click', () => {
@@ -46,13 +46,18 @@ button3.addEventListener('click', () => {
 });
 
 const gameLogic = () => {
-const randomized = Math.ceil(Math.random() * 3)
-if (randomized === 1){
-Choose1.classList.add('grenade'); {
-Wisely++;
-}}
-else if (randomized === 2) {
-Choose2.classList.add('grenade');
-Poorly++;
+    const randomized = Math.ceil(Math.random() * 3);
+    if (randomized === 1){
+        button.classList.add('grenade'); {
+            Wisely++;
+        }}
+    else if (randomized === 2) {
+        button.classList.add('grenade');
+        Poorly++;
+    };
+    if (randomized === 3) {
+        button.classList.add('grenade');
+        Poorly++;
+    };
 // need only 2 but one for each button
-}};
+};
