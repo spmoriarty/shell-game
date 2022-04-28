@@ -52,12 +52,22 @@ const gameLogic = () => {
             Wisely++;
         }}
     else if (randomized === 2) {
+        button2.classList.add('grenade');
+        Poorly++;
+    };
+    if (randomized === 3) {
+        button3.classList.add('grenade');
+        Poorly++;
+        const randomized = Math.ceil(Math.random() * 3);
+    if (randomized === 1){
+        button2.classList.add('grenade'); {
+            Wisely++;
+        }};
+    else if (randomized === 2) {
         button.classList.add('grenade');
         Poorly++;
     };
     if (randomized === 3) {
-        button.classList.add('grenade');
+        button3.classList.add('grenade');
         Poorly++;
-    };
-// need only 2 but one for each button
 };
