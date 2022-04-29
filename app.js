@@ -8,10 +8,13 @@
 const button = document.getElementById('Button1');
 const button2 = document.getElementById('Button2');
 const button3 = document.getElementById('Button3');
-const Grenade = document.getElementById('Choose');
+
+const Grenade = document.getElementById('grenade');
+
 const ChooseA = document.getElementById('Choose1');
 const ChooseB = document.getElementById('Choose2');
 const ChooseC = document.getElementById('Choose3');
+
 
 // Results
 let Wisely = document.getElementById('Wisely');
@@ -22,14 +25,7 @@ let count = 0;
 let wisely = 0;
 
 
-//Remove -reset
-function removal() {
-    button.classList.remove('grenade');
-    button2.classList.remove('grenade');
-    button3.classList.remove('grenade');
-}
-
-
+//Buttons
 button.addEventListener('click', () => {
     console.log('You have chosen');
     removal();
@@ -43,19 +39,19 @@ button2.addEventListener('click', () => {
     
 });
 
-  
 button3.addEventListener('click', () => {
     console.log('You have chosen');
     removal();
     gameLogic(3);
 });
 
+//Logic
 const gameLogic = (buttonNumber) => {
     const randomized = Math.ceil(Math.random() * 3);
     //console.log(randomized);
     if (randomized === buttonNumber){
-        Grenade.classList.add('grenade');
-        //button.classList.add('grenade');
+        //Choose.classList.add('grenade');
+        button.classList.add('grenade');
         wisely++;
         count++;
     }
@@ -65,4 +61,11 @@ const gameLogic = (buttonNumber) => {
     Total.textContent = count;
     Wisely.textContent = wisely;
     Poor.textContent = count - wisely;
+};
+
+//Remove -reset
+function removal() {
+    button.classList.remove('grenade');
+    button2.classList.remove('grenade');
+    button3.classList.remove('grenade');
 };
