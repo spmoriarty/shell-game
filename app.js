@@ -15,6 +15,9 @@ const ChooseA = document.getElementById('Choose1');
 const ChooseB = document.getElementById('Choose2');
 const ChooseC = document.getElementById('Choose3');
 
+const Grenade1 = document.getElementById('grenade1');
+const Grenade2 = document.getElementById('grenade2');
+const Grenade3 = document.getElementById('grenade3');
 
 // Results
 let Wisely = document.getElementById('Wisely');
@@ -26,22 +29,25 @@ let wisely = 0;
 
 
 //Buttons
+
+
 button.addEventListener('click', () => {
     console.log('You have chosen');
-    removal();
+    // removal();
+    Grenade1.style.display = 'block';
     gameLogic(1);
 
 });
 button2.addEventListener('click', () => {
     console.log('You have chosen');
-    removal();
+    // removal();
     gameLogic(2);
     
 });
+console.log('You have chosen');
 
 button3.addEventListener('click', () => {
-    console.log('You have chosen');
-    removal();
+    // removal();
     gameLogic(3);
 });
 
@@ -51,13 +57,14 @@ const gameLogic = (buttonNumber) => {
     //console.log(randomized);
     if (randomized === buttonNumber){
         //Choose.classList.add('grenade');
-        button.classList.add('grenade');
+        button.classList.remove('hidden');
         wisely++;
         count++;
+        //Grenade1.append(url('https://steamuserimages-a.akamaihd.net/ugc/945081009037914252/61C468F95701104030B156FCBA96493FD13D31D3/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false width=100 height=100'));
     }
     else {
         count++;
-    }
+    };
     Total.textContent = count;
     Wisely.textContent = wisely;
     Poor.textContent = count - wisely;
@@ -65,7 +72,7 @@ const gameLogic = (buttonNumber) => {
 
 //Remove -reset
 function removal() {
-    button.classList.remove('grenade');
-    button2.classList.remove('grenade');
-    button3.classList.remove('grenade');
-};
+    Grenade1.classList.remove('grenade-hidden');
+    Grenade2.classList.remove('grenade-hidden');
+    Grenade3.classList.remove('grenade-hidden');
+}
