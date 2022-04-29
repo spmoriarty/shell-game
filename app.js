@@ -5,10 +5,13 @@
 
 // let state
 //Button
-const button = document.getElementById('Choose1');
-const button2 = document.getElementById('Choose2');
-const button3 = document.getElementById('Choose3');
-
+const button = document.getElementById('Button1');
+const button2 = document.getElementById('Button2');
+const button3 = document.getElementById('Button3');
+const Grenade = document.getElementById('Choose');
+const ChooseA = document.getElementById('Choose1');
+const ChooseB = document.getElementById('Choose2');
+const ChooseC = document.getElementById('Choose3');
 
 // Results
 let Wisely = document.getElementById('Wisely');
@@ -21,42 +24,45 @@ let wisely = 0;
 
 //Remove -reset
 function removal() {
-    button.classlist.remove('grenade');
-    button2.classlist.remove('grenade');
-    button3.classlist.remove('grenade');
+    button.classList.remove('grenade');
+    button2.classList.remove('grenade');
+    button3.classList.remove('grenade');
 }
 
 
 button.addEventListener('click', () => {
     console.log('You have chosen');
+    removal();
     gameLogic(1);
 
 });
 button2.addEventListener('click', () => {
     console.log('You have chosen');
-    gameLogic (2);
+    removal();
+    gameLogic(2);
     
 });
 
   
 button3.addEventListener('click', () => {
     console.log('You have chosen');
-    gameLogic (3);
+    removal();
+    gameLogic(3);
 });
 
 const gameLogic = (buttonNumber) => {
     const randomized = Math.ceil(Math.random() * 3);
     //console.log(randomized);
     if (randomized === buttonNumber){
-        //Wisely.classList.add('grenade')
+        Grenade.classList.add('grenade');
         //button.classList.add('grenade');
-            wisely++;
-            count++;
+        wisely++;
+        count++;
     }
     else {
         count++;
     }
     Total.textContent = count;
-    Wisely.textContent= wisely;
-    Poorly.textContent= count - wisely;
+    Wisely.textContent = wisely;
+    Poor.textContent = count - wisely;
 };

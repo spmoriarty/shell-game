@@ -13,8 +13,8 @@
 }
 
 .Choose.grenade {
-    src= "https://media.istockphoto.com/vectors/cartoon-illustration-of-golden-cup-on-white-surfaces-vector-id153540835" id="grail1-img" width="100" height="100"
+    src "https://media.istockphoto.com/vectors/cartoon-illustration-of-golden-cup-on-white-surfaces-vector-id153540835" id="grail1-img" width="100" height="100"
     z-index: 10;
     
-}
+};
 
