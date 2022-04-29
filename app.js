@@ -12,10 +12,12 @@ const button3 = document.getElementById('Choose3');
 
 // Results
 let Wisely = document.getElementById('Wisely');
-let Poorly = document.getElementById('Poorly');
+let Poor = document.getElementById('Poorly');
 let Total = document.getElementById('Total');
 
 let count = 0;
+let wisely = 0;
+
 
 //Remove -reset
 function removal() {
@@ -27,47 +29,34 @@ function removal() {
 
 button.addEventListener('click', () => {
     console.log('You have chosen');
-    gameLogic ();
-    count++;
-    Total.textContent = count;
+    gameLogic(1);
+
 });
 button2.addEventListener('click', () => {
     console.log('You have chosen');
-    gameLogic ();
-    count++;
-    Total.textContent = count;
+    gameLogic (2);
+    
 });
+
   
 button3.addEventListener('click', () => {
     console.log('You have chosen');
-    gameLogic ();
-    count++;
-    Total.textContent = count;
+    gameLogic (3);
 });
 
-const gameLogic = () => {
+const gameLogic = (buttonNumber) => {
     const randomized = Math.ceil(Math.random() * 3);
-    if (randomized === 1){
-        button.classList.add('grenade'); {
-            Wisely++;
-        }}
-    else if (randomized === 2) {
-        button2.classList.add('grenade');
-        Poorly++;
-    };
-    if (randomized === 3) {
-        button3.classList.add('grenade');
-        Poorly++;
-        const randomized = Math.ceil(Math.random() * 3);
-    if (randomized === 1){
-        button2.classList.add('grenade'); {
-            Wisely++;
-        }};
-    else if (randomized === 2) {
-        button.classList.add('grenade');
-        Poorly++;
-    };
-    if (randomized === 3) {
-        button3.classList.add('grenade');
-        Poorly++;
+    //console.log(randomized);
+    if (randomized === buttonNumber){
+        //Wisely.classList.add('grenade')
+        //button.classList.add('grenade');
+            wisely++;
+            count++;
+    }
+    else {
+        count++;
+    }
+    Total.textContent = count;
+    Wisely.textContent= wisely;
+    Poorly.textContent= count - wisely;
 };
