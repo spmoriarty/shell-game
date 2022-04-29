@@ -33,21 +33,20 @@ let wisely = 0;
 
 button.addEventListener('click', () => {
     console.log('You have chosen');
-    // removal();
-    Grenade1.style.display = 'block';
+    removal();
     gameLogic(1);
 
 });
 button2.addEventListener('click', () => {
     console.log('You have chosen');
-    // removal();
+    removal();
     gameLogic(2);
     
 });
-console.log('You have chosen');
+
 
 button3.addEventListener('click', () => {
-    // removal();
+    removal();
     gameLogic(3);
 });
 
@@ -57,7 +56,6 @@ const gameLogic = (buttonNumber) => {
     //console.log(randomized);
     if (randomized === buttonNumber){
         //Choose.classList.add('grenade');
-        button.classList.remove('hidden');
         wisely++;
         count++;
         //Grenade1.append(url('https://steamuserimages-a.akamaihd.net/ugc/945081009037914252/61C468F95701104030B156FCBA96493FD13D31D3/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false width=100 height=100'));
@@ -68,11 +66,21 @@ const gameLogic = (buttonNumber) => {
     Total.textContent = count;
     Wisely.textContent = wisely;
     Poor.textContent = count - wisely;
+    if (randomized === 1) {
+        Grenade1.classList.remove('hide');
+    }
+    if (randomized === 2) {
+        Grenade2.classList.remove('hide');
+    }
+    if (randomized === 3) {
+        Grenade3.classList.remove('hide');
+    }
 };
+
 
 //Remove -reset
 function removal() {
-    Grenade1.classList.remove('grenade-hidden');
-    Grenade2.classList.remove('grenade-hidden');
-    Grenade3.classList.remove('grenade-hidden');
+    Grenade1.classList.add('hide');
+    Grenade2.classList.add('hide');
+    Grenade3.classList.add('hide');
 }
