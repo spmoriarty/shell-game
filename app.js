@@ -9,11 +9,6 @@ const button = document.getElementById('Button1');
 const button2 = document.getElementById('Button2');
 const button3 = document.getElementById('Button3');
 
-const Grenade = document.getElementById('grenade');
-
-const ChooseA = document.getElementById('Choose1');
-const ChooseB = document.getElementById('Choose2');
-const ChooseC = document.getElementById('Choose3');
 
 const Grenade1 = document.getElementById('grenade1');
 const Grenade2 = document.getElementById('grenade2');
@@ -32,13 +27,11 @@ let wisely = 0;
 
 
 button.addEventListener('click', () => {
-    console.log('You have chosen');
     removal();
     gameLogic(1);
 
 });
 button2.addEventListener('click', () => {
-    console.log('You have chosen');
     removal();
     gameLogic(2);
     
@@ -62,7 +55,7 @@ const gameLogic = (buttonNumber) => {
     }
     else {
         count++;
-    };
+    }
     Total.textContent = count;
     Wisely.textContent = wisely;
     Poor.textContent = count - wisely;
